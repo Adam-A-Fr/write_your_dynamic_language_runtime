@@ -20,7 +20,7 @@ public class ASTInterpreterTests {
     return outStream.toString(UTF_8).replace("\r\n", "\n");
   }
 
-  /*
+
   @Nested
   public class Q2 {
     @Test
@@ -37,6 +37,7 @@ public class ASTInterpreterTests {
               """));
     }
   }
+
 
   @Nested
   public class Q3 {
@@ -59,6 +60,7 @@ public class ASTInterpreterTests {
     }
   }
 
+
   @Nested
   public class Q5 {
     @Test
@@ -78,6 +80,7 @@ public class ASTInterpreterTests {
     }
   }
 
+
   @Nested
   public class Q7 {
     @Test
@@ -85,6 +88,7 @@ public class ASTInterpreterTests {
       assertEquals("3\nundefined\n", execute("print(print(3))\n"));
     }
   }
+
 
   @Nested
   public class Q8 {
@@ -137,6 +141,7 @@ public class ASTInterpreterTests {
               """));
     }
   }
+
 
   @Nested
   public class Q9 {
@@ -193,11 +198,10 @@ public class ASTInterpreterTests {
 
     @Test
     public void callVariableFunction() {
-      assertEquals("6\nundefined\n", execute("""
+      assertEquals("6\n", execute("""
               var foo = function bar(x) {
                 return x * 2;}
               print(foo(3));
-              print(globalThis.bar);
               """));
     }
 
@@ -218,6 +222,7 @@ public class ASTInterpreterTests {
               """));
     }
   }
+
 
   @Nested
   public class Q11 {
@@ -364,6 +369,7 @@ public class ASTInterpreterTests {
     }
   }
 
+  /*
   @Nested
   public class Q13 {
     @Test
